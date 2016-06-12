@@ -1,0 +1,283 @@
+a.adestaque:link {
+	font-family: Arial, Helvetica, sans-serif;
+	color : D20000;
+    background: transparent;
+	font-size : 13px;
+	font-weight : bold;
+	text-decoration : underline;
+}
+a.adestaque:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	color : D20000;
+    background: transparent;
+	font-size : 13px;
+	font-weight : bold;
+	text-decoration : underline;
+}
+a.adestaque:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	color : D20000;
+    background: transparent;
+	font-size : 13px;
+	font-weight : bold;
+	text-decoration : underline;
+}
+
+
+a.apretopq:link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : black;
+    background: transparent;
+	font-size : 12px;
+	text-decoration : underline;
+}
+a.apretopq:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : black;
+    background: transparent;
+	font-size : 12px;
+	text-decoration : underline;
+}
+a.apretopq:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : black;
+    background: transparent;
+	font-size : 12px;
+	text-decoration : underline;
+}
+
+a.amenu:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : #000000;
+    background: transparent;
+	font-size : 10px;
+	text-decoration : underline;
+}
+a.amenu:link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : #000000;
+    background: transparent;
+	font-size : 10px;
+	text-decoration : underline;
+}
+a.amenu:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : #FFFFFF;
+    background: transparent;
+	font-size : 10px;
+	text-decoration : underline;
+}
+a.amenu:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : #FFFFFF;
+    background: transparent;
+	font-size : 10px;
+	text-decoration : underline;
+}
+
+td.descricao{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : Gray;
+    background : transparent;
+	font-size : 12px;
+}
+
+
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : black;
+	font-size : 12px;
+}
+
+td.pretopq{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : black;
+    background : transparent;
+	font-size : 12px;
+}
+
+td.pretompq{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : black;
+    background : transparent;
+	font-size : 10px;
+	margin-bottom:2px;
+}
+
+
+td.pretopqb{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : black;
+    background : transparent;
+	font-size : 12px;
+	font-weight : bold;
+}
+
+td.pretopqm{
+	font-family: Verdana, Arial, sans-serif;
+	color : Gray;
+    background : transparent;
+	font-size : 12px;
+}
+
+td.menor{
+	font-family: arial;
+	color : black;
+	font-size : 10px;
+}
+
+td.destaque{
+	font-family: Arial, Helvetica, sans-serif;
+	color : #D20000;
+	font-size : 13px;
+	font-weight : bold;
+}
+
+td.destaquelink{
+	font-family: Arial, Helvetica, sans-serif;
+	color : Navy;
+	font-size : 13px;
+	font-weight : bold;
+	text-decoration : underline;
+}
+
+td.titulo{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 15px;
+	font-weight : bold;
+}
+
+td.cinza{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : Gray;
+    background : transparent;
+	font-size : 10px;
+}
+
+td.azulpq{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : 0078D4;
+    background : transparent;
+	font-size : 12px;
+}
+td.azulpqb{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : 0078D4;
+	background : transparent;
+	font-size : 12px;
+	font-weight : bold;
+}
+
+td.azuldestaque{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : 174485;
+    background : transparent;
+	font-size : 12px;
+}
+
+td.redpq{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : Red;
+	background : transparent;
+	font-size : 12px;
+}
+ 
+td.bckdestaque{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : #000000;
+    background : transparent;
+	font-weight : bold;
+	background-color : #EFEFEF;
+	font-size : 12px;
+}
+
+td.nrdestaque{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : #101878;
+    background: transparent;
+	font-size : 11px;
+}
+
+td.separador {
+    border: 1px solid Gray;
+}
+
+td.azul {
+    background: #6666CC;
+}
+input.semborda{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	border : 0px;
+}
+
+
+input{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	border : 1px solid Gray;
+}
+
+input.blue{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #0000A0;
+}
+
+input.blueb{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #0000A0;
+	font-weight : bold;
+}
+
+input.black{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+}
+
+input.blackb{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+}
+
+body{
+	margin : 1
+}
+
+.azulpq{
+	font-family: Verdana;
+	color : #0000A0;
+	font-size : 12px;
+}
+
+select.blue{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #0000A0;
+	border : 1px solid Gray;
+}
+
+select.limitado{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	width : 180px;
+	border : 1px solid Gray;
+}
+
+select{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	border : 1px solid Gray;
+}
+
+textarea{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	border : 1px solid Gray;
+}
+
+form {
+    margin-bottom: 0 ; 
+}

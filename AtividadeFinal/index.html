@@ -1,0 +1,128 @@
+<SCRIPT language="Javascript">
+function login() {
+	document.form1.action = 'home/login.php';
+	document.form1.submit();
+}
+
+function changePassword() {
+	document.form1.action = 'AlteraSenha.html';
+	document.form1.submit();
+}
+</SCRIPT>
+
+<html lang="pt">
+<head>
+    <title>
+        Acesso ao Sistema
+    </title>
+    <link href="login.css" rel="stylesheet" type="text/css">
+
+    
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" onload="document.form1.user.focus()">
+
+
+
+                                    
+
+<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td align="center" valign="middle">
+            <form name="form1" method="POST">
+            <input type="hidden" name="acao" value="submit">
+            
+            <table width="438" height="261" cellpadding="0" cellspacing="0" border="0" class="loginBorder">
+                <tr>
+                    <td class="divLabel" colspan="3">
+                        Login
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td class="imgLogo">
+                                    <img src="images/login/logo1.png"/>
+                                </td>
+                                <td class="tdLogin" align="right">
+                                                            
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <tr>
+                                            <td width="40px" class="loginLabel">Login</td>
+                                            <td align="right" style="padding-left:5px">
+                                                <input name="user" type="text" size="15" value="" style="width:100%"/>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td colspan="2" style="height: 5px;"></td>
+                                          </tr>
+                                          <tr>
+                                            <td class="loginLabel">Senha</td>
+                                            <td align="right" style="padding-left:5px"><input name="password" type="password" size="15" style="width:100%" onkeypress="enter(event)"/></td>
+                                          </tr>                                           <!--name="password"-->
+                                          <tr>
+                                            <td colspan="2" height="6px"></td>
+                                          </tr>
+                                        </table>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <tr>
+                                            <td  width="45px">&nbsp;</td>
+                                            <td align="left" >
+                                                <span class="loginLink" style="cursor: pointer" onclick="changePassword();" >mudar a senha</span>
+                                            </td>
+                                            <td align="right">
+                                            <div onclick="login();">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="60px" >
+                                                  <tr>
+                                                    <td class="btOnE">&nbsp;</td>
+                                                    <td class="btOnC">OK</td>
+                                                    <td class="btOnD">&nbsp;</td>
+                                                  </tr>
+                                                </table>
+                                            </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td width="4%">&nbsp;</td>
+                                <td width="92%" class="tdFooter">&nbsp;</td>
+                                <td width="4%">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            
+            <div id="loginErrorDiv">
+                &nbsp;
+                    
+            </div>
+                    
+            </form>
+        </td>
+    </tr>    
+    
+</table>
+<script>
+function enter(evt) {
+    if(window.event)
+        key = window.event.keyCode; //IE
+    else
+        key = evt.which; //firefox
+    if (key == 13)
+        login();
+
+}
+</script>
+
+</html>

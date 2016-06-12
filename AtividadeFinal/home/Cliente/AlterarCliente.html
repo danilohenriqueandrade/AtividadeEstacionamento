@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Pesquisa</title>
+<link rel="stylesheet" href="estilo.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+    function detalha(valor) {
+        //alert('Detalha '+valor);
+        document.form.EMPID.value = valor;
+        document.form.action = "CadastroUserEcxSrv";
+        document.form.submit();
+        return false;
+    }
+    
+    function paginacao(p) {
+        document.form.pagina.value = p;
+        document.form.submit();
+    }
+    
+    function busca(){
+        document.form.pagina.value = 0;
+        if(document.form.CAMPOBUSCA.value == ""){
+            alert('Informar campo de busca');
+            return false;
+        }
+        document.form.submit();
+        return true;
+    }
+    
+</script>
+</head>
+<body onload="document.form.CAMPOBUSCA.focus();">
+<form name="form" method="post" action="BuscaCliente.jsp" onsubmit="return busca();">
+<input type="hidden" name="EMPID" value="">
+<input type="hidden" name="urlAction" value="CadastroUserEcxSrv">
+<table width="100%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+    <tr><td bgcolor="#CCCCCC" align="center" class="titulo">Pesquisa Cliente</td></tr>
+    <tr>
+        <td align="center">
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="pretopq">Nome:</td>
+                    <td align="left" class="pretopq">
+                        <input type="hidden" name="id" value="54">
+                        <input type="hidden" name="acao" value="1">
+                        <input type="hidden" name="passo" value="ListaUsuarioECX">
+                        <input type="hidden" name="pagina" value="0">
+                        <input name="CAMPOBUSCA" type="text" id="CAMPOBUSCA" size="40" maxlength="60" value="">
+                    </td>
+                    <td>
+                        Registros por página:
+                        <select name="pLinhas">
+                        
+                            <option value="10" >10</option>
+                        
+                            <option value="30" >30</option>
+                        
+                            <option value="50" >50</option>
+                        
+                            <option value="100" >100</option>
+                        
+                        </select>
+                    </td>
+                    <td>
+                        <input type="submit" name="Submit" value=" ... ">
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<br>
+
+</table>
+</form>
+</body>
+</html>
