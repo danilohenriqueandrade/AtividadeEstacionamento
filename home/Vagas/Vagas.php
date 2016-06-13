@@ -35,8 +35,8 @@
 						 echo "</select>";// Closing of list box
 					?></td>
 				<td><select name=STATUS>
-					<option value="DISPONIVEL">DISPONÍVEL</option>
 					<option value="OCUPADO">OCUPADO</option>
+					<option value="DISPONIVEL">DISPONÍVEL</option>
 				</select></td>
 				<td><?php
 					require_once('funcoes.php');  

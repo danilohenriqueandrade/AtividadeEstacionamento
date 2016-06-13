@@ -29,7 +29,12 @@
 			</tr>
 			<tr>
 				<td><input name="PLACA" type="text" id="PLACA" maxlength="8" onKeyPress="ColocaMascaraPlaca(document.form.PLACA);"/></td>
-				<td><input name="TIPO" type="text" id="TIPO" maxlength="20"/></td>
+				<td><select name=TIPO>
+				<option value="Carro">Carro</option>
+				<option value="Moto">Moto</option>
+				<option value="Caminhao">Caminhão</option>
+				<option value="Outro">Outro</option>
+				</select></td>
 				<td><input name="MODELO" type="text" id="MODELO" maxlength="30"/></td>
 				<td><input name="ANO" type="text" id="ANO" maxlength="4"/></td>
 				<td><input name="COR" type="text" id="COR" maxlength="15"/></td>

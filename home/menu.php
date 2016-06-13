@@ -97,7 +97,9 @@
                     </td>
                 </tr>				
             </table>
-			
+		</td>
+	</tr>
+	
 	<tr>
 		<td>
 			<table id="pai2" cellpadding="0" cellspacing="1" border="0">
@@ -140,7 +142,9 @@
                     </td>
                 </tr>
 			</table>
-			
+		</td>
+	</tr>
+	
 	<tr>
 		<td>
 			<table id="pai3" cellpadding="0" cellspacing="1" border="0">
@@ -156,13 +160,47 @@
 						</a>
 					</td>
 				</tr>
+				<tr>
+                    <td></td>
+                    <td align="left">
+                        <ul>
+                            <table id="filho3" cellpadding="0" cellspacing="0" style="display:none">
+                            </table>
+                        </ul>
+                    </td>
+                </tr>
 			</table>
-			
-        </td>
-    </tr>
-        
-
-    
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<table id="pai4" cellpadding="0" cellspacing="1" border="0">
+				<tr>
+					<td align="center" width="30" nowrap>
+						<a href="javascript:controle(document.all('filho4'),'4')" class="amenu">
+						<img border="0" name="sinal4" src="Registros\Registros.jpg">
+						</a>
+					</td>
+					<td align="left">
+						<a href="Registros\ConsultaRegistros.php" target="mainFrame" class="amenu">
+						Relacionamento de Registros
+						</a>
+					</td>
+				</tr>
+				<tr>
+                    <td></td>
+                    <td align="left">
+                        <ul>
+                            <table id="filho4" cellpadding="0" cellspacing="0" style="display:none">
+                            </table>
+                        </ul>
+                    </td>
+                </tr>
+			</table>
+		</td>
+	</tr>
+	
 </table>
 
 <br>

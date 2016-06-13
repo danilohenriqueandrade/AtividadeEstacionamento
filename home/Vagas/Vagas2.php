@@ -35,8 +35,8 @@
 						 echo "</select>";// Closing of list box
 					?></td>
 				<td><select name=STATUS>
-					<option value="DISPONIVEL">DISPONÍVEL</option>
 					<option value="OCUPADO">OCUPADO</option>
+					<option value="DISPONIVEL">DISPONÍVEL</option>
 				</select></td>
 				<td><?php
 					require_once('funcoes.php');  
@@ -62,22 +62,35 @@
 </form>
 
 <?php
-
 	require_once('funcoes.php');
 	conectar('localhost', 'root','', 'bd_estacionamento');
 
 	$ID = $_POST["ID"];
 	$STATUS = $_POST["STATUS"];
 	$VEICULO = $_POST["VEICULO"];
-
+	
 	if ($STATUS == "DISPONIVEL"){
-		$query = "UPDATE `vagas` SET `status_vaga` ='DISPONIVEL', `fk_veiculo_vaga` =null WHERE `vagas`.`id_vaga` = ".$ID;
+		$query = "UPDATE `vagas` SET `status_vaga` ='DISPONIVEL', `fk_veiculo_vaga`=null WHERE `vagas`.`id_vaga` = ".$ID;
+		mysql_query($query) or die ('Falha ao executar query no banco de dados');
+		atualizaRegistro($ID);
 	} else {
 		$query = "UPDATE `vagas` SET `status_vaga` = '".$STATUS."', `fk_veiculo_vaga` = '".$VEICULO."' WHERE `vagas`.`id_vaga` = ".$ID;
+		mysql_query($query) or die ('Falha ao executar query no banco de dados');
+		criaRegistro($ID, $VEICULO);
 	}
 	
+	function criaRegistro($ID, $VEICULO){
+		$query2 = "INSERT INTO `registros` (`id_registro`, `entrada_registro`, `saida_registro`, `fk_registro_cliente`, `fk_registro_veiculo`, `fk_registro_vaga`) VALUES ('', NOW(), NULL, NULL, '".$VEICULO."', '".$ID."')";
+		mysql_query($query2) or die ('Falha ao executar query no banco de dados');
+	}
 	
-	mysql_query($query) or die ('Falha ao executar query no banco de dados');
+	function atualizaRegistro($ID){
+		$VEICULO=mysql_fetch_assoc(mysql_query("SELECT * FROM vagas where id_vaga='".$ID."'"));
+		$query2 = "UPDATE `registros` SET `saida_registro`=NOW() WHERE `registros`.`fk_registro_vaga`=".$ID;
+		echo $query2;
+		mysql_query($query2) or die ('Falha ao executar query no banco de dados');
+	}
+	
 	mysql_close() or die ('Falha ao fechar o banco de dados');
 
 ?>
