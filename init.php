@@ -50,8 +50,8 @@ function __autoload($classe){
 	require_once $classe.".php";	
 }
 
-if (file_exists(BASEPATH . "config.php")){
-	require_once BASEPATH . "config.php";
+if (file_exists(ROOT."/AtividadeFinal/config.php")){
+	require_once ROOT."/AtividadeFinal/config.php";
 } else {
 	die("Erro: Arquivo config.php nao localizado");
 }	

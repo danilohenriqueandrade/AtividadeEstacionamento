@@ -5,13 +5,13 @@
         <title>Sistema Estacionamento</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<?php
-			if(file_exists("../init.php")){
-				require_once "../init.php";
+			if(file_exists("..\init.php")){
+				require_once "..\init.php";
 			} else {
 				die("Arquivo de init não encontrado");
 			}
 
-			require_once "../seguranca.php";
+			require_once "..\seguranca.php";
 
 				
 		?>

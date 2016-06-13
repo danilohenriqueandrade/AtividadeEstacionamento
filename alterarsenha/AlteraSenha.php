@@ -1,6 +1,7 @@
 <?php
-	require_once('funcoes.php');
-	conectar('localhost', 'root', '', 'bd_estacionamento');
+	
+	mysql_connect('localhost', 'root', '') or die ("Falha na conexao");
+	mysql_select_db('bd_estacionamento') or die ("Falha no acesso" .'bd_estacionamento');
 
 	$user = $_POST["LOGIN"];
 	$password = $_POST["SENHA"];
@@ -19,7 +20,7 @@
 		} elseif ($resultado['password'] == $password) {
 			
 			mysql_query("UPDATE usuarios SET password = '".$newpassword."' WHERE user='".$user."'");
-			header('Location: home\home.html');
+			header('Location: ..\home\index.php');
 			
 		} else {
 			

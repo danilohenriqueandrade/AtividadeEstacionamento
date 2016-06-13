@@ -104,11 +104,46 @@
 				<tr>
 					<td align="center" width="30" nowrap>
 						<a href="javascript:controle(document.all('filho2'),'2')" class="amenu">
-						<img border="0" name="sinal2" src="Vagas\vagas.jpg">
+						<img border="0" name="sinal2" src="Veiculos\veiculo.jpg">
 						</a>
 					</td>
 					<td align="left">
-						<a href="Vagas\vagas.html" target="mainFrame" class="amenu">
+						<a href="Veiculos\ConsultaVeiculo.php" target="mainFrame" class="amenu">
+						Cadastro de Veículos
+						</a>
+					</td>
+				</tr>
+				<tr>
+                    <td></td>
+                    <td align="left">
+                        <ul>
+                            <table id="filho2" cellpadding="0" cellspacing="0" style="display:none">
+                                    
+                                <tr>
+                                    <td>
+                                        <a href="Veiculos\InserirVeiculo.php" target="mainFrame" class="amenu">
+                                        Inserir Veículos
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </ul>
+                    </td>
+                </tr>
+			</table>
+			
+	<tr>
+		<td>
+			<table id="pai3" cellpadding="0" cellspacing="1" border="0">
+				<tr>
+					<td align="center" width="30" nowrap>
+						<a href="javascript:controle(document.all('filho3'),'3')" class="amenu">
+						<img border="0" name="sinal3" src="Vagas\vagas.jpg">
+						</a>
+					</td>
+					<td align="left">
+						<a href="Vagas\Vagas.html" target="mainFrame" class="amenu">
 						Relacionamento de Vagas
 						</a>
 					</td>

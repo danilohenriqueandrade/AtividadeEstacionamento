@@ -1,7 +1,7 @@
 <?php
 session_start();			
-if(file_exists("init.php")){
-	require_once "init.php";
+if(file_exists("..\AtividadeFinal\init.php")){
+	require_once "..\AtividadeFinal\init.php";
 } else {
 	die("Arquivo de init não encontrado");
 }
@@ -17,10 +17,12 @@ if(getenv("REQUEST_METHOD") == "POST"){
 	$senha = isset($_POST["password"]) ? limpa($_POST["password"]) : "";
 	
 	$sql = sprintf("select count(*) from usuarios where user = '%s' and password = '%s'", $nome, $senha);
+	
 	mysql_connect(SERVIDOR, USUARIO, SENHA) or die(mysql_error());
 	mysql_select_db(BANCO) or die(mysql_error());
 	
 	$re = mysql_query($sql) or die(mysql_error());
+	
 	if(mysql_result($re, 0)){
 		$re 	   = mysql_query("select * from usuarios where user = '$nome' and password = '$senha'") or die(mysql_error());		
 		$resultado = mysql_fetch_array($re);
@@ -34,12 +36,13 @@ if(getenv("REQUEST_METHOD") == "POST"){
 			if(isset($_POST["cookie"])){			
 				setcookie("dados", serialize($dados), time()+60*60*24*365);			
 			}
-			header("Location: /AtividadeFinal/home/");
+			
+			header("Location: /AtividadeFinal/home/index.php");
 		} else {
-			header("Location: index.html");
+			header("Location: /AtividadeFinal/index.html");
 		}		
 	} else {
-		header("Location: index.html");
+		header("Location: /AtividadeFinal/index.html");
 	}
 }
 ?>
