@@ -14,7 +14,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `bd_estacionamento`
@@ -26,12 +25,18 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `clientes`
 --
 
+DROP DATABASE bd_estacionamento;
+
+CREATE DATABASE bd_estacionamento;
+
+USE bd_estacionamento;
+
 CREATE TABLE `clientes` (
   `id_cliente` int(6) NOT NULL,
   `nome_cliente` varchar(45) DEFAULT NULL,
   `rg_cliente` varchar(9) DEFAULT NULL,
   `fk_veiculo_cliente` int(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -44,7 +49,7 @@ CREATE TABLE `precos` (
   `tempohora_preco` int(11) DEFAULT NULL,
   `taxaextra_preco` int(11) DEFAULT NULL,
   `desconto_preco` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -59,7 +64,7 @@ CREATE TABLE `registros` (
   `saida_registro` datetime DEFAULT NULL,
   `valorpago_registro` varchar(5) DEFAULT NULL,
   `fk_registro_cliente` int(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -91,7 +96,7 @@ CREATE TABLE `vagas` (
   `id_vaga` int(3) NOT NULL,
   `status_vaga` varchar(10) DEFAULT NULL,
   `fk_veiculo_vaga` int(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB;
 
 -- --------------------------------------------------------
 
@@ -106,7 +111,7 @@ CREATE TABLE `veiculos` (
   `placa_veiculo` varchar(8) DEFAULT NULL,
   `modelo_veiculo` varchar(30) DEFAULT NULL,
   `cor_veiculo` varchar(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB;
 
 --
 -- Indexes for dumped tables
