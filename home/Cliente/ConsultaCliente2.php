@@ -12,16 +12,16 @@
 </script>
 </head>
 <body onload="document.form.CAMPOBUSCA.focus();">
-<form name="form" method="post" action="ConsultaVeiculo2.php" onsubmit="return busca();">
+<form name="form" method="post" action="ConsultaCliente2.php" onsubmit="return busca();">
 <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
-    <tr><td bgcolor="#CCCCCC" align="center" class="titulo">Pesquisa Veículo</td></tr>
+    <tr><td bgcolor="#CCCCCC" align="center" class="titulo">Pesquisa Clientes</td></tr>
     <tr>
         <td align="center">
             <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td class="pretopq">Placa:</td>
+                    <td class="pretopq">Nome:</td>
                     <td align="left" class="pretopq">
-                        <input name="CAMPOBUSCA" type="text" id="CAMPOBUSCA" size="40" maxlength="60" value="">
+                        <input name="CAMPOBUSCA" type="text" id="CAMPOBUSCA" size="40" maxlength="45" value="">
                     </td>	
                     <td>
                         <input type="submit" name="Submit" value=" ... ">
@@ -40,20 +40,19 @@
 	conectar('localhost', 'root','', 'bd_estacionamento');
 	
 	if ($_POST["CAMPOBUSCA"] == ""){
-		$result = mysql_query("SELECT * FROM veiculos");
+		$result = mysql_query("SELECT * FROM clientes");
 	} else {
-		$result = mysql_query("SELECT * FROM veiculos WHERE placa_veiculo like '%".$_POST["CAMPOBUSCA"]."%'");
+		$result = mysql_query("SELECT * FROM clientes WHERE nome_cliente like '%".$_POST["CAMPOBUSCA"]."%'");
 	}
 	
-	echo "<table border=5 style=3 width=100%><tr><td>ID</td><td>Placa</td><td>Tipo</td><td>Modelo</td><td>Ano</td><td>Cor</td><td>Cliente</td></tr>";
+	echo "<table border=5 style=3 width=100%><tr><td>ID</td><td>Nome</td><td>RG</td></tr>";
 	
 	while($row = mysql_fetch_assoc($result)){
-        echo "<tr><td>".$row['id_veiculo']."</td>"."<td>".$row['placa_veiculo']."</td>"."<td>".$row['tipo_veiculo']."</td>"."<td>".$row['modelo_veiculo']."</td>"."<td>".$row['ano_veiculo']."</td>"."<td>".$row['cor_veiculo']."</td>";
-		$fk = mysql_fetch_assoc(mysql_query("SELECT * FROM clientes where id_cliente='".$row['fk_cliente_veiculo']."'"));
-		echo "<td>".$fk['nome_cliente']."</td></tr>";
+        echo "<tr><td>".$row['id_cliente']."</td>"."<td>".$row['nome_cliente']."</td>"."<td>".$row['rg_cliente']."</td>";
     }
 	
 	echo "</table>";
+	
 ?>
 </body>
 </html>

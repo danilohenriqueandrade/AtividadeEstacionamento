@@ -64,7 +64,7 @@
                         </a>
                     </td>
                     <td align="left">
-                        <a href="Cliente\AlterarCliente.html" target="mainFrame" class="amenu">
+                        <a href="Cliente\ConsultaCliente.php" target="mainFrame" class="amenu">
                         Cadastro de Clientes
                         </a>
                     </td>
@@ -78,7 +78,7 @@
                                     
                                 <tr>
                                     <td>
-                                        <a href="Cliente\InserirCliente.html" target="mainFrame" class="amenu">
+                                        <a href="Cliente\InserirCliente.php" target="mainFrame" class="amenu">
                                         Inserir Cliente
                                         </a>
                                     </td>
@@ -86,8 +86,8 @@
                 
                                 <tr>
                                     <td>
-                                        <a href="Cliente\AlterarCliente.html" target="mainFrame" class="amenu">
-                                        Alterar Cliente
+                                        <a href="Cliente\ConsultaCliente.php" target="mainFrame" class="amenu">
+                                        Consultar Cliente
                                         </a>
                                     </td>
                                 </tr>
@@ -123,6 +123,14 @@
                                     <td>
                                         <a href="Veiculos\InserirVeiculo.php" target="mainFrame" class="amenu">
                                         Inserir Veículos
+                                        </a>
+                                    </td>
+                                </tr>
+								
+								<tr>
+                                    <td>
+                                        <a href="Veiculos\ConsultaVeiculo.php" target="mainFrame" class="amenu">
+                                        Consultar Veículos
                                         </a>
                                     </td>
                                 </tr>

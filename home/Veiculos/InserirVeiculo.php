@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Pesquisa</title>
+<title>Inserir Veiculos</title>
 <link rel="stylesheet" href="estilo.css" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script>    
@@ -14,34 +14,39 @@
 <body onload="document.form.CAMPOBUSCA.focus();">
 <form name="form" method="post" action="InserirVeiculo2.php" onsubmit="return busca();">
 
-<table>
+<table width="100%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+	<tr><td bgcolor="#CCCCCC" align="center" class="titulo">Inseri Veículo</td></tr>
 	<tr>
-		<td>Placa</td>
-		<td>Tipo</td>
-		<td>Modelo</td>
-		<td>Ano</td>
-		<td>Cor</td>
-		<td>Cliente</td>
-	</tr>
-	<tr>
-		<td><input name="PLACA" type="text" id="PLACA"/></td>
-		<td><input name="TIPO" type="text" id="TIPO"/></td>
-		<td><input name="MODELO" type="text" id="MODELO"/></td>
-		<td><input name="ANO" type="text" id="ANO"/></td>
-		<td><input name="COR" type="text" id="COR"/></td>
-		<td><?php
-			require_once('funcoes.php');  
-			conectar('localhost', 'root','', 'bd_estacionamento');
-			$sql=mysql_query("SELECT nome_cliente,id_cliente FROM clientes order by nome_cliente"); 
-			echo "<select name=CLIENTES>";
-				while($rowl = mysql_fetch_assoc($sql)){
-					echo "<option value=". $rowl['id_cliente'] . ">" . $rowl['nome_cliente'] . "</option>"; 
-				}
-			 echo "</select>";// Closing of list box
-		?></td>
-		
-		<td><input type="submit" name="Submit" value="Incluir"</td>
-		
+		<table>
+			<tr>
+				<td>Placa</td>
+				<td>Tipo</td>
+				<td>Modelo</td>
+				<td>Ano</td>
+				<td>Cor</td>
+				<td>Cliente</td>
+			</tr>
+			<tr>
+				<td><input name="PLACA" type="text" id="PLACA"/></td>
+				<td><input name="TIPO" type="text" id="TIPO"/></td>
+				<td><input name="MODELO" type="text" id="MODELO"/></td>
+				<td><input name="ANO" type="text" id="ANO"/></td>
+				<td><input name="COR" type="text" id="COR"/></td>
+				<td><?php
+					require_once('funcoes.php');  
+					conectar('localhost', 'root','', 'bd_estacionamento');
+					$sql=mysql_query("SELECT nome_cliente,id_cliente FROM clientes order by nome_cliente"); 
+					echo "<select name=CLIENTES>";
+						while($rowl = mysql_fetch_assoc($sql)){
+							echo "<option value=". $rowl['id_cliente'] . ">" . $rowl['nome_cliente'] . "</option>"; 
+						}
+					 echo "</select>";// Closing of list box
+				?></td>
+				
+				<td><input type="submit" name="Submit" value="Incluir"</td>
+				
+			</tr>
+		</table>
 	</tr>
 </table>
 
