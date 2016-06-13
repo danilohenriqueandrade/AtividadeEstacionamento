@@ -151,7 +151,7 @@
 						</a>
 					</td>
 					<td align="left">
-						<a href="Vagas\Vagas.html" target="mainFrame" class="amenu">
+						<a href="Vagas\Vagas.php" target="mainFrame" class="amenu">
 						Relacionamento de Vagas
 						</a>
 					</td>
