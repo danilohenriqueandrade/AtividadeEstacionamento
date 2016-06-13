@@ -3,6 +3,7 @@
 <title>Inserir Veiculos</title>
 <link rel="stylesheet" href="estilo.css" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="JavaScript" type="text/javascript" src="..\MascaraValidacao.js"></script> 
 <script>    
     function busca(){
         document.form.submit();
@@ -11,7 +12,7 @@
     
 </script>
 </head>
-<body onload="document.form.CAMPOBUSCA.focus();">
+<body onload="document.form.PLACA.focus();">
 <form name="form" method="post" action="InserirVeiculo2.php" onsubmit="return busca();">
 
 <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
@@ -27,11 +28,11 @@
 				<td>Cliente</td>
 			</tr>
 			<tr>
-				<td><input name="PLACA" type="text" id="PLACA"/></td>
-				<td><input name="TIPO" type="text" id="TIPO"/></td>
-				<td><input name="MODELO" type="text" id="MODELO"/></td>
-				<td><input name="ANO" type="text" id="ANO"/></td>
-				<td><input name="COR" type="text" id="COR"/></td>
+				<td><input name="PLACA" type="text" id="PLACA" maxlength="8" onKeyPress="ColocaMascaraPlaca(document.form.PLACA);"/></td>
+				<td><input name="TIPO" type="text" id="TIPO" maxlength="20"/></td>
+				<td><input name="MODELO" type="text" id="MODELO" maxlength="30"/></td>
+				<td><input name="ANO" type="text" id="ANO" maxlength="4"/></td>
+				<td><input name="COR" type="text" id="COR" maxlength="15"/></td>
 				<td><?php
 					require_once('funcoes.php');  
 					conectar('localhost', 'root','', 'bd_estacionamento');
@@ -43,7 +44,7 @@
 					 echo "</select>";// Closing of list box
 				?></td>
 				
-				<td><input type="submit" name="Submit" value="Incluir"</td>
+				<td><input type="submit" name="Submit" value="Incluir" onclick="ValidaAno(document.form.ANO);TiraMascaraPlaca(document.form.PLACA);"</td>
 				
 			</tr>
 		</table>

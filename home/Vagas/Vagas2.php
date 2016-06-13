@@ -34,12 +34,16 @@
 							}
 						 echo "</select>";// Closing of list box
 					?></td>
-				<td><input name="STATUS" type="text" id="STATUS"/></td>
+				<td><select name=STATUS>
+					<option value="DISPONIVEL">DISPONÍVEL</option>
+					<option value="OCUPADO">OCUPADO</option>
+				</select></td>
 				<td><?php
 					require_once('funcoes.php');  
 					conectar('localhost', 'root','', 'bd_estacionamento');
 					$sql=mysql_query("SELECT * FROM veiculos order by id_veiculo"); 
 					echo "<select name=VEICULO>";
+					?><option value=""></option><?php
 						while($row32 = mysql_fetch_assoc($sql)){
 							echo "<option value=".$row32['id_veiculo'].">"."Placa: ".$row32['placa_veiculo']." | Tipo: ".$row32['tipo_veiculo']." | Modelo: ".$row32['modelo_veiculo']." | Ano: ".$row32['ano_veiculo']." | Cor: ".$row32['cor_veiculo']." | Dono: "; 
 							$fk1 = mysql_fetch_assoc(mysql_query("SELECT nome_cliente FROM clientes where id_cliente='".$row32['fk_cliente_veiculo']."'"));
@@ -48,7 +52,7 @@
 					 echo "</select>";// Closing of list box
 				?></td>
 				
-				<td><input type="submit" name="Submit" value="Incluir"</td>
+				<td><input type="submit" name="Submit" value="Atualizar"</td>
 				
 			</tr>
 		</table>
@@ -66,7 +70,12 @@
 	$STATUS = $_POST["STATUS"];
 	$VEICULO = $_POST["VEICULO"];
 
-	$query = "UPDATE `vagas` SET `status_vaga` = '".$STATUS."', `fk_veiculo_vaga` = '".$VEICULO."' WHERE `vagas`.`id_vaga` = ".$ID;
+	if ($STATUS == "DISPONIVEL"){
+		$query = "UPDATE `vagas` SET `status_vaga` ='DISPONIVEL', `fk_veiculo_vaga` =null WHERE `vagas`.`id_vaga` = ".$ID;
+	} else {
+		$query = "UPDATE `vagas` SET `status_vaga` = '".$STATUS."', `fk_veiculo_vaga` = '".$VEICULO."' WHERE `vagas`.`id_vaga` = ".$ID;
+	}
+	
 	
 	mysql_query($query) or die ('Falha ao executar query no banco de dados');
 	mysql_close() or die ('Falha ao fechar o banco de dados');

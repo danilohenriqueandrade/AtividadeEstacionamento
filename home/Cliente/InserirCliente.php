@@ -2,7 +2,8 @@
 <head>
 <title>Inserir Cliente</title>
 <link rel="stylesheet" href="estilo.css" type="text/css">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script language="JavaScript" type="text/javascript" src="..\MascaraValidacao.js"></script> 
 <script>    
     function busca(){
         document.form.submit();
@@ -11,7 +12,7 @@
     
 </script>
 </head>
-<body onload="document.form.CAMPOBUSCA.focus();">
+<body onload="document.form.NOME.focus();">
 <form name="form" method="post" action="InserirCliente2.php" onsubmit="return busca();">
 
 <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
@@ -19,9 +20,9 @@
 	<tr>
 		<table>
 			<tr>
-				<td>Nome: <input name="NOME" type="text" id="NOME"/></td>
-				<td>RG: <input name="RG" type="text" id="RG"/></td>
-				<td><input type="submit" name="Submit" value="Incluir"</td>
+				<td>Nome* <input name="NOME" type="text" id="NOME" maxlength="45"/></td>
+				<td><label for="RG">RG* </label><input name="RG" type="text" id="RG" maxlength="12" onKeyPress="ColocaMascaraRG(document.form.RG);"/></td>
+				<td><input type="submit" name="Submit" value="Incluir" onClick="TiraMascaraRG(document.form.RG);"</td>
 			</tr>
 		</table>
 	</tr>
